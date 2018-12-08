@@ -4,21 +4,29 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,  initial-scale=1">
 	<title>Tutorial BTI</title>
+	<link rel="stylesheet" href="fonts/stylesheet.css">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/tutorial.css">
 </head>
 <body>
+
 <div class="container">
-	<h1>Tutorial - Cálculo de Dosagem BTI</h1>
-	<div class="tutorText"></div>
-	<ul type="1">
-		<li>Começe preenchendo os nomes do município, localidade e arroio/afluente.</li>
+
+	<h1>Tutorial - Dosagem BTI</h1>
+	
+	<div class="tutorText">
+	
+	<div class="tutorList central">
+	<ul class="big-list">
+		<li><img src="img/play-button.svg" alt="" class="list-img">Começe preenchendo os nomes do município, localidade e arroio/afluente.</li>
 		<li>Preencha todos os valores na ordem e clique nos botões correspondentes para calcular as medidas:</li>
-		<ul>
+		<ul class="black">
 			<li>Media Largura (ML)</li>
 			<li>Media Profundidade (MP) do ponto 0 ao 5</li>
 			<li>Média Tempo (MT)</li>
 		</ul>
-		<p>Os seguintes itens, serão calculados automaticamente.</p>
-		<ul>
+		<p class="black">Os seguintes itens, serão calculados automaticamente.</p>
+		<ul class="black">
 			<li>Velocidade (V) e Velocidade Corrigida (VC)</li>
 			<li>Vazão (Q)</li>
 			<li>Porcentagem (%)</li>
@@ -26,19 +34,26 @@
 			<li>Dose (D)</li>
 			<li>Carreamento</li>
 		</ul>
-		<li>Devem ver preenchidos no mínimo 5 valores para Média Largura(ML) e Média Tempo(MT), os valores para Média Profundidade(MP) devem ter no mínimo 6 valores.</li>
+		<li><img src="img/play-button.svg" alt="" class="list-img">Devem ver preenchidos no mínimo 5 valores para Média Largura(ML) e Média Tempo(MT), os valores para Média Profundidade(MP) devem ter no mínimo 6 valores.</li>
 		
-		<li>Para calcular a porcentagem selecione o tipo de calha e a altura da calha em centímetros. Ao obter o valor da porcentagem, este será o valor do arroio/afluente específico, este valor será usado na página 'Vazão dos Arroios', que dependendo da altura da água na calha, vai calcular a 'vazão' a 'dose' e o 'carreamento'.</li>
-		<li>Caso queira refazer um cálculo específico clique no botão voltar correspondente.</li>
+		<li><img src="img/play-button.svg" alt="" class="list-img">Para calcular a porcentagem selecione o tipo de calha e a altura da calha em centímetros. Ao obter o valor da porcentagem, este será o valor do arroio/afluente específico, este valor será usado na página 'Vazão dos Arroios', que dependendo da altura da água na calha, vai calcular a 'vazão' a 'dose' e o 'carreamento'.</li>
+		<li><img src="img/play-button.svg" alt="" class="list-img">Caso queira refazer um cálculo específico clique no botão voltar correspondente.</li>
 	</ul>
-	<p>Obs.: Cada vez que 2 arroios se encontram, formando um só arroio, a vazão deste novo arroio é a soma dos 2 arroios que o formam. Temos então que somar o percentual dos 2 arroios e esta soma será a vazão do novo arroio formado.</p>
+	<p class="black">Cada vez que 2 arroios se encontram, formando um só arroio, a vazão deste novo arroio é a soma dos 2 arroios que o formam. Temos então que somar o percentual dos 2 arroios e esta soma será a vazão do novo arroio formado.</p>
+	</div>
+
+    <div class="tutorLinks">
+        <p class="black">Abaixo segue manual técnico</p>
+        <a href="pdf/MANUAL TÉCNICO SIMULÍDEO.PDF" target="_blank" class="buttonTop">Baixar Manual</a>
+        <p class="black">Exemplo de formulário preenchido</p><a href="prints/print-preenchido.fw.png" class="buttonTop">Exemplo preenchido</a>
+
+        <p class="pFechar">
+        <a class="close black" href="bti.html" onclick="javascript:window.close()" >Fechar X</a>
+        </p>
+	</div>
 	
-
-	<p>Abaixo segue manual técnico<br><a href="https://drive.google.com/open?id=1DLVByPm--Qq2DizWXncBBiRKsfvJWHnC" target="_blank">Baixar Manual</a></p>
-	<p>Exemplo de formulário preenchido<br><a href="">Exemplo preenchido</a></p>
-
-	<a href="bti.html">Voltar ao aplicativo</a>
-</div>
+	</div><!-- tutorText -->
+</div><!-- container -->
 	
 </body>
 

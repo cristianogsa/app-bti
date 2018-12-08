@@ -1,7 +1,0 @@
-colocar no drive os prints - - screenshot modelo preenchido
--else if valor 0
--configurar impressão 
--como enviar página por email
-
-- inserir e cadastrar todos os arroios e conforme mudar a altura da calha, todos os valores mudam junto, como na tabela.
-

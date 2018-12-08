@@ -1,6 +1,7 @@
 body{
 	background-color: #ffebcc;
 	font-family: 'robotoregular', sans-serif;
+    color:#333333;
 }
 .container{
 	display: flex;
@@ -12,7 +13,6 @@ h1{
     text-decoration: underline;
     font-size: 24px;
     margin-bottom: 25px;
-    color:#333333;
 }
 
 /*button type*/
@@ -136,8 +136,15 @@ section#labels .names{
     display: block;
     font-size: 20px;
     margin-bottom: 15px;
-    color:#333333;
 }
+
+/*fechar*/
+.pFechar{margin-top: 25px;}
+.close{
+    text-decoration: none;
+    color: #c33838;
+}
+.close:hover{color:#142b9a; }
 
 @media all and (max-width: 400px) {
     #slcts{
