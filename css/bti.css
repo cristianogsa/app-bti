@@ -1,0 +1,262 @@
+@import url(buttons-placeholder.css);
+@import url(backToTop.css);
+@import url(select.css);
+
+/*- MOBILE FIRST 320 - 480*/
+body{
+    font-family: 'robotoregular', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+    background-color: rgba(217, 217, 217, 0.2);
+    color:#333333;
+}
+
+.container{
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.central{
+    width: 100%;
+    max-width: 500px;
+}
+
+#margem{
+    width: 100%;
+    max-width: 500px;
+}
+
+h1{
+    font-size: 26px;
+    text-decoration: underline;
+    text-align: center;
+    margin-bottom: 0px;
+    text-transform: uppercase;
+    font-family: 'novaregular';
+    letter-spacing: 2px;
+    font-family: 'robotomedium';
+}
+
+#welcome{
+    border: 1px solid #e6d0d0;
+    -moz-box-shadow: 0px 10px 14px -7px #91b8b3;
+	-webkit-box-shadow: 0px 10px 14px -7px #91b8b3;
+	box-shadow: 0px 10px 14px -7px #91b8b3;
+    border-radius: 2px;
+    margin: 20px auto;
+    background-color: rgba(69, 170, 242, 0.2);
+}
+#welcome p{margin: 15px 20px;}
+
+div#watch p#horas{
+    color: #2d2828;
+    font-size: 26px;
+    font-family: 'djb_get_digitalregular';
+    position:absolute;
+}
+div#moment{
+    margin-top: 50px;
+}
+
+#weekDay,#monthDay,#monthName,#yearNum,.black{
+    font-weight: 700;
+}
+
+/*buttons link top*/
+#links{ 
+    margin-bottom: 20px;
+}
+#links ul{
+    margin: 0;
+    padding: 0;
+}
+#links ul li{
+    display: flex;
+    justify-content:center;
+    list-style: none;
+    margin-bottom: 15px;
+}
+
+/*input labels*/
+section#labels{
+    margin-bottom: 40px;
+}
+section#labels .names{
+    height: 40px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+.names label{
+    display: block;
+    font-size: 20px;
+}
+.names input{
+    width: 100%;
+    height: 30px;
+    box-sizing: border-box;
+    padding: 10px;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    font-size: 18px;
+}
+
+h3{
+    text-align: center;
+    margin-bottom: 0;
+    text-decoration: underline;
+    font-size: 24px;
+}
+
+
+/*MEDIA LARGURA*/
+section.larg{
+    background-color: rgba(0, 132, 255,0.4);
+}
+
+section.larg-temp{
+    border-radius: 2px;
+    border-bottom: 2px solid #f5eaea;
+    padding: 20px 0;
+}
+
+.form-group{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.form-group .points{
+    margin-right: 5px;
+    font-size: 22px;
+}
+
+.minMed {
+    margin: 0;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+/*PROFUNDIDADE*/
+section#media-prof{
+    background-color: rgba(26, 188, 156,0.6);
+    border-bottom: 2px solid #f5eaea;
+}
+
+section#media-prof p{
+    padding: 0px 20px;
+}
+
+.prof{
+    border-top: 2px solid #827a7a;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-radius: 2px;
+}
+
+.label-top{
+    margin-top: 20px;
+    text-align: center;
+    font-size: 24px;
+    text-decoration: underline;
+}
+
+.form-group .inpProf{
+    width: 30%;
+    max-width: 100px;
+    height: 30px;
+    margin: 3px;
+    text-align: center;
+    font-size: 20px;
+}
+
+
+/*TEMPO*/
+section.temp{
+    background-color: rgba(211, 31, 31, 0.38);
+}
+
+/*VALORES*/
+section#valores{
+    color: #4a4a4a;
+    font-size: 18px;
+    padding: 20px 0;
+}
+#valores ul{
+    margin: 0;
+    padding: 0;
+}
+#valores ul li{
+    margin: 10px;
+    list-style: none;
+}
+
+#valores ul li .texto-res p{margin: 0;}
+#valores ul li .texto-res img{
+    width: 15px;
+    margin-bottom: -1px;
+    margin-right: 10px;
+}
+ul li .velCor{margin-top: 10px;}
+
+
+/*BUTTONS texts*/
+.esc{display: none;}
+
+.linkImg{
+    display: flex;
+    justify-content: center;
+    margin: 5px 0;
+}
+
+.linkVolt{
+    font-size: 20px;
+    color: #000;
+    text-decoration: none; 
+    width: 100px;
+    height: 38px;
+    padding: 8px;
+    padding-bottom: 0;
+    border: 1px solid #6ec68d;
+    border-radius: 3px;
+    background-color: #a0e293;
+}
+.linkVolt:hover{
+    border: 1px solid #8de2ab;
+}
+.imgVolt{
+    width: 30px;
+    margin-bottom: -8px;
+    margin-right: 5px;
+}
+.texto p{
+    font-size: 22px;
+    margin: 0;
+    border-bottom: 1px solid rgba(118, 242, 218, 1);
+}
+
+#text-prof-total p {
+    margin: 0;
+}
+
+#text-prof-total{
+    text-align: center;
+    font-size: 22px;
+    border:2px solid rgba(118, 242, 218, 1);
+    margin-top: 30px;
+}
+
+.texto-res{
+    font-size: 18px;
+    text-align: center;
+}
+
+@media all and (max-width: 530px){
+        #margem{
+        width: 90%;
+    }
+}

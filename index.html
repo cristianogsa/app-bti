@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>BTI APP</title>
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="fonts/stylesheet.css">
+<link rel="stylesheet" href="css/bti.css">
+</head>
+
+<body onload="relogio()">
+
+<div class="container">
+
+<div id="margem">
+<h1>Cálculo de Dosagem BTI</h1>
+
+<div id="welcome" class="central">
+   <div id="watch">
+       <p id="horas"><span id="relogio"></span></p>
+    </div>
+    <div id="moment">
+	   <p id="data">Hoje é <span id="weekDay"> </span> dia <span id="monthDay"></span> de <span id="monthName"></span> de <span id="yearNum"></span>.</p>   
+    </div>
+</div>
+
+<div id="links">
+	<ul>
+		<li><a href="tutorial.html" class="buttonTop" target="_blank">Tutorial</a></li>
+		<li><a href="calhas.html" class="buttonTop" target="_blank">Vazão das Calhas</a></li>
+		<li><a href="arroios.html" class="buttonTop" target="_blank">Vazão dos Arroios</a></li>
+	</ul>
+</div>
+
+
+<section id="labels">
+	<div class="names dMun">
+	    <label for="nomeMun">Município:</label>
+	    <input type="text" maxlength="40" placeholder="Nome do Município">
+	</div>	
+	<div class="names dLoc">
+	    <label for="nomeLoc">Localidade:</label>
+	    <input type="text" maxlength="40" placeholder="Nome da localidade">
+	</div>	
+	<div class="names dArroio">
+	    <label for="nomeArroio">Arroio/Afluente:</label>
+	    <input type="text" maxlength="40" placeholder="Nome do arroio ou afluente">
+	</div>
+</section>
+
+</div><!-- div margen--> 
+
+
+<section class="larg larg-temp central">
+	<h3>Média Largura (m)</h3>
+    <p class="minMed">* mínimo de 5 medidas</p>
+	<div class="form-group">
+		<label for="larg0" class="points">Ponto 0 =</label>
+		<input type="number" id="larg0" name="larg0" class="inpProf" placeholder="valor">	
+	</div>
+	<div class="form-group">
+		<label for="larg1" class="points">Ponto 1 =</label>
+		<input type="number" id="larg1" name="larg1" class="inpProf" placeholder="valor">
+	</div>
+	<div class="form-group">
+		<label for="larg2" class="points">Ponto 2 =</label>
+		<input type="number" id="larg2" name="larg2" class="inpProf" placeholder="valor">
+	</div>
+	<div class="form-group">
+		<label for="larg3" class="points">Ponto 3 =</label>
+		<input type="number" id="larg3" name="larg3" class="inpProf" placeholder="valor">
+	</div>
+	<div class="form-group">
+		<label for="larg4" class="points">Ponto 4 =</label>
+		<input type="number" id="larg4" name="larg4" class="inpProf" placeholder="valor">
+	</div>
+	<div class="form-group">
+		<label for="larg5" class="points">Ponto 5 =</label>
+		<input type="number" id="larg5" name="larg5" class="inpProf" placeholder="valor">
+	</div>
+
+	<div class="form-group">
+		<button class="buttonR buttonLarg">Média Largura</button>
+	<div class="resLarg esc">
+	    <div class="linkImg">
+            <a href="#media-larg" class="voltarLarg linkVolt">
+            <img src="img/back.svg" alt="" class="imgVolt">
+                <span>Voltar</span>
+            </a>
+		</div>
+		<div class="texto">
+            <p>ML = <span class="largValor1">0</span><span class="largSing"></span></p>
+		</div>
+	</div>
+	</div>
+</section><!-- media largura -->
+
+
+<!-- Profundidade -->
+<section id="media-prof" class="central">
+	<h3>Média da Profundidade</h3>
+    <p class="minMed">* mínimo de 6 medidas</p>
+	<p>Medida feita a cada 10, 15, 20cm – quanto mais estreito o curso de água mais juntas devem ser as medidas de profundidade.
+    </br>Os valores devem ser colocados em centímetros pois serão convertidos automaticamente para metros.</p>
+
+<div class="point0 prof" id="prof0">
+    <div class="label-top">
+        <label for="prof0">Ponto 0</label>
+    </div>
+    
+	<div class="form-group">
+		<input type="number" id="prof01" class="inpProf" placeholder="valor 1">	
+		<input type="number" id="prof02" class="inpProf" placeholder="valor 2">	
+		<input type="number" id="prof03" class="inpProf" placeholder="valor 3">
+	</div>
+	<div class="form-group">
+		<input type="number" id="prof04" class="inpProf" placeholder="valor 4">	
+		<input type="number" id="prof05" class="inpProf" placeholder="valor 5">	
+		<input type="number" id="prof06" class="inpProf" placeholder="valor 6">	
+	</div>
+	<div class="form-group">
+		<input type="number" id="prof07" class="inpProf" placeholder="valor 7">	
+		<input type="number" id="prof08" class="inpProf" placeholder="valor 8">	
+		<input type="number" id="prof09" class="inpProf" placeholder="valor 9">
+	</div>
+
+	<div class="form-group">
+		<button class="buttonR buttonProf">Profundidade 0</button>
+	<div class="resProf esc">
+	    <div class="linkImg">
+            <a href="#prof0" class="voltarProf linkVolt">
+            <img src="img/back.svg" alt="" class="imgVolt">
+            <span>Voltar</span>
+            </a>
+        </div>
+		<div class="texto">
+			<p>Ponto 0 = <span class="profValor">0</span> metros</p>
+		</div>
+	</div>
+	</div>
+</div><!-- point0-->
+
+<!--point 1-->
+
+<div class="point1 prof" id="prof1">
+    <div class="label-top">
+        <label for="prof0">Ponto 1</label>
+    </div>
+	<div class="form-group">
+		<input type="number" id="prof11" class="inpProf" placeholder="valor 1">	
+		<input type="number" id="prof12" class="inpProf" placeholder="valor 2">	
+		<input type="number" id="prof13" class="inpProf" placeholder="valor 3">
+	</div>
+	<div class="form-group">
+		<input type="number" id="prof14" class="inpProf" placeholder="valor 4">	
+		<input type="number" id="prof15" class="inpProf" placeholder="valor 5">	
+		<input type="number" id="prof16" class="inpProf" placeholder="valor 6">	
+	</div>
+	<div class="form-group">
+		<input type="number" id="prof17" class="inpProf" placeholder="valor 7">	
+		<input type="number" id="prof18" class="inpProf" placeholder="valor 8">	
+		<input type="number" id="prof19" class="inpProf" placeholder="valor 9">
+	</div>
+
+	<div class="form-group">
+		<button class="buttonR buttonProf1">Profundidade 1</button>
+	<div class="resProf1 esc">
+	    <div class="linkImg">
+            <a href="#prof1" class="voltarProf1 linkVolt">
+            <img src="img/back.svg" alt="" class="imgVolt">
+            <span>Voltar</span>
+            </a>
+        </div>
+		<div class="texto">
+			<p>Ponto 1 = <span class="profValor1">0</span> metros</p>
+		</div>
+	</div>
+	</div>
+</div><!-- point1-->
+
+<!--point 2-->
+<div class="point2 prof" id="prof2">
+    <div class="label-top">
+        <label for="prof0">Ponto 2</label>
+    </div>
+	<div class="form-group">
+		<input type="number" id="prof21" class="inpProf" placeholder="valor 1">	
+		<input type="number" id="prof22" class="inpProf" placeholder="valor 2">	
+		<input type="number" id="prof23" class="inpProf" placeholder="valor 3">
+	</div>
+	<div class="form-group">
+		<input type="number" id="prof24" class="inpProf" placeholder="valor 4">	
+		<input type="number" id="prof25" class="inpProf" placeholder="valor 5">	
+		<input type="number" id="prof26" class="inpProf" placeholder="valor 6">	
+	</div>
+	<div class="form-group">
+		<input type="number" id="prof27" class="inpProf" placeholder="valor 7">	
+		<input type="number" id="prof28" class="inpProf" placeholder="valor 8">	
+		<input type="number" id="prof29" class="inpProf" placeholder="valor 9">
+	</div>
+
+	<div class="form-group">
+		<button class="buttonR buttonProf2">Profundidade 2</button>
+	<div class="resProf2 esc">
+	    <div class="linkImg">
+            <a href="#prof2" class="voltarProf2 linkVolt">
+            <img src="img/back.svg" alt="" class="imgVolt">
+            <span>Voltar</span>
+            </a>
+        </div>
+		<div class="texto">
+			<p>Ponto 2 = <span class="profValor2">0</span> metros</p>
+		</div>
+	</div>
+	</div>
+</div><!-- point2-->
+
+<!--point 3-->
+<div class="point3 prof" id="prof3">
+    <div class="label-top">
+        <label for="prof0">Ponto 3</label>
+    </div>
+	<div class="form-group">
+		<input type="number" id="prof31" class="inpProf" placeholder="valor 1">	
+		<input type="number" id="prof32" class="inpProf" placeholder="valor 2">	
+		<input type="number" id="prof33" class="inpProf" placeholder="valor 3">
+	</div>
+	<div class="form-group">
+		<input type="number" id="prof34" class="inpProf" placeholder="valor 4">	
+		<input type="number" id="prof35" class="inpProf" placeholder="valor 5">	
+		<input type="number" id="prof36" class="inpProf" placeholder="valor 6">	
+	</div>
+	<div class="form-group">
+		<input type="number" id="prof37" class="inpProf" placeholder="valor 7">	
+		<input type="number" id="prof38" class="inpProf" placeholder="valor 8">	
+		<input type="number" id="prof39" class="inpProf" placeholder="valor 9">
+	</div>
+
+	<div class="form-group">
+		<button class="buttonR buttonProf3">Profundidade 3</button>
+	<div class="resProf3 esc">
+        <div class="linkImg">
+            <a href="#prof3" class="voltarProf3 linkVolt">
+            <img src="img/back.svg" alt="" class="imgVolt">
+            <span>Voltar</span>
+            </a>
+        </div>
+		<div class="texto">
+			<p>Ponto 3 = <span class="profValor3">0</span> metros</p>
+		</div>
+	</div>
+	</div>
+</div><!-- point3-->
+
+
+<!--point 4-->
+<div class="point4 prof" id="prof4">
+    <div class="label-top">
+        <label for="prof0">Ponto 4</label>
+    </div>
+	<div class="form-group">
+		<input type="number" id="prof41" class="inpProf" placeholder="valor 1">	
+		<input type="number" id="prof42" class="inpProf" placeholder="valor 2">	
+		<input type="number" id="prof43" class="inpProf" placeholder="valor 3">
+	</div>
+	<div class="form-group">
+		<input type="number" id="prof44" class="inpProf" placeholder="valor 4">	
+		<input type="number" id="prof45" class="inpProf" placeholder="valor 5">	
+		<input type="number" id="prof46" class="inpProf" placeholder="valor 6">	
+	</div>
+	<div class="form-group">
+		<input type="number" id="prof47" class="inpProf" placeholder="valor 7">	
+		<input type="number" id="prof48" class="inpProf" placeholder="valor 8">	
+		<input type="number" id="prof49" class="inpProf" placeholder="valor 9">
+	</div>
+
+	<div class="form-group">
+		<button class="buttonR buttonProf4">Profundidade 4</button>
+	<div class="resProf4 esc">
+        <div class="linkImg">
+            <a href="#prof4" class="voltarProf4 linkVolt">
+            <img src="img/back.svg" alt="" class="imgVolt">
+            <span>Voltar</span>
+            </a>
+        </div>
+		<div class="texto">
+			<p>Ponto 4 = <span class="profValor4">0</span> metros</p>
+		</div>
+	</div>
+	</div>
+</div><!-- point4-->
+
+
+<!--point 5 + total-->
+<div class="point5 prof" id="prof5">
+    <div class="label-top">
+        <label for="prof0">Ponto 5</label>
+    </div>
+	<div class="form-group">
+		<input type="number" id="prof51" class="inpProf" placeholder="valor 1">	
+		<input type="number" id="prof52" class="inpProf" placeholder="valor 2">	
+		<input type="number" id="prof53" class="inpProf" placeholder="valor 3">
+	</div>
+	<div class="form-group">
+		<input type="number" id="prof54" class="inpProf" placeholder="valor 4">	
+		<input type="number" id="prof55" class="inpProf" placeholder="valor 5">	
+		<input type="number" id="prof56" class="inpProf" placeholder="valor 6">	
+	</div>
+	<div class="form-group">
+		<input type="number" id="prof57" class="inpProf" placeholder="valor 7">	
+		<input type="number" id="prof58" class="inpProf" placeholder="valor 8">	
+		<input type="number" id="prof59" class="inpProf" placeholder="valor 9">
+	</div>
+
+	<div class="form-group">
+		<button class="buttonR buttonProf5">Profundidade 5</button>
+	<div class="resProf5 esc">
+        <div class="linkImg">
+            <a href="#prof5" class="voltarProf5 linkVolt">
+            <img src="img/back.svg" alt="" class="imgVolt">
+            <span>Voltar</span>
+            </a>
+        </div>
+		<div class="texto">
+			<p>Ponto 5 = <span class="profValor5">0</span> metros</p>
+		</div>
+		<div id="text-prof-total">
+			<p><strong>Profundidade Total</strong></p>
+			<span>MP = </span><span class="profValorTotal1">0</span><span> metros</span>
+		</div>
+	</div>
+	</div>
+</div><!-- point5 + total-->
+
+</section><!-- media prof -->
+
+
+<!-- Media Tempo-->
+<section class="temp larg-temp central">
+	<h3>Média Tempo (s)</h3>
+    <p class="minMed">* mínimo de 5 medidas</p>
+	<div class="form-group">
+		<label for="temp0" class="points">Tempo 1 =</label>
+		<input type="number" id="temp0" name="temp0" class="inpProf" placeholder="valor">
+	</div>
+	<div class="form-group">
+		<label for="temp1" class="points">Tempo 2 =</label>
+		<input type="number" id="temp1" name="temp1" class="inpProf" placeholder="valor">
+	</div>
+	<div class="form-group">
+		<label for="temp2" class="points">Tempo 3 =</label>
+		<input type="number" id="temp2" name="temp2" class="inpProf" placeholder="valor">
+	</div>
+	<div class="form-group">
+		<label for="temp3" class="points">Tempo 4 =</label>
+		<input type="number" id="temp3" name="temp3" class="inpProf" placeholder="valor">
+	</div>
+	<div class="form-group">
+		<label for="temp4" class="points">Tempo 5 =</label>
+		<input type="number" id="temp4" name="temp4" class="inpProf" placeholder="valor">
+	</div>
+	<div class="form-group">
+		<label for="temp5" class="points">Tempo 6 =</label>
+		<input type="number" id="temp5" name="temp5" class="inpProf" placeholder="valor">
+	</div>
+
+	<div class="form-group">
+		<button class="buttonR buttonTemp">Média Tempo</button>
+	<div class="resTemp esc">
+    <div class="linkImg">
+		<a href="#media-tempo" class="voltarTemp linkVolt">
+        <img src="img/back.svg" alt="" class="imgVolt">
+			<span>Voltar</span>
+		</a>
+    </div>
+		<div class="texto">
+			<p>MT = <span class="tempValor1">0</span> segundos</p>
+		</div>
+	</div>
+	</div>
+
+</section><!-- media tempo -->
+
+<section id="valores" class="central">
+<ul>
+	<li>
+	<div class="texto-res">
+		<p class="black"><img src="img/play-button.svg" alt="">Extensão = <span class="extension">0</span> metros</p>
+	</div>
+	</li>
+	<li>
+	<div class="texto-res">
+		<p class="black"><img src="img/play-button.svg" alt="">Média Largura (ML)</p>
+		<p><span class="largValor2 valor">0</span><span class="largSing2"></span></p>
+	</div>
+	</li>	
+	<li>	
+	<div class="texto-res">
+		<p class="black"><img src="img/play-button.svg" alt="">Média Profundidade (MP)</p>
+		<p><span class="profValorTotal2 valor">0</span> metros</p>
+	</div>
+	</li>	
+	<li>	
+	<div class="texto-res">
+		<p class="black"><img src="img/play-button.svg" alt="">Média Tempo (MT)</p>
+		<p><span class="tempValor2 valor">0</span> segundos</p>
+	</div>
+	</li>
+	<li>
+	<div class="texto-res">
+		<p class="black"><img src="img/play-button.svg" alt="">Velocidade</p>
+		<p class="velocP">V = Extensão x 60 seg. / MT</p>
+        <p>V= <span class="velocSp">0</span> m/min</p>
+	</div>
+	<div class="texto-res velCor valor">
+		<p class="black">Velocidade Corrigida</p>
+		<p>VC = Velocidade x 0,85</p>
+		<p><span class="velocCSp">0</span> m/min</p>
+	</div>
+	</li>
+	<li>
+	<div class="texto-res">
+		<p class="black"><img src="img/play-button.svg" alt="">Vazão</p>
+		<p><span>Q = ML x MP x VC</span></p>
+		<p><span>Q = </span><span class="vazaoSp1">0</span> m&sup3;/min</p>
+	</div>
+	</li>
+</ul>
+</section><!-- valores-->
+
+
+<!-- PORCENTAGEM-->
+<section id="porcentagem" class="central">
+   
+<h3>Porcentagem</h3>
+<p class="minMed">em relação a calha</p>
+
+
+<div id="slcts">
+
+<div class="select">
+    <select id="tipoCalha" name="tipoCalha">
+     <option>Selecione o tipo da calha</option>
+      <option value="1">01 - 30 x 90 (cm)</option>
+      <option value="2">02 - 40 x 180 (cm)</option>
+      <option value="3">03 - 60 x 180 (cm)</option>
+    </select>
+</div>
+
+<div class="select">
+    <select id="calhaAltura" name="calhaAltura">
+      <option>Selecione a altura da água (cm)</option>
+      <option value="1">01 cm</option>
+      <option value="2">02 cm</option>
+      <option value="3">03 cm</option>
+      <option value="4">04 cm</option>
+      <option value="5">05 cm</option>
+      <option value="6">06 cm</option>
+      <option value="7">07 cm</option>
+      <option value="8">08 cm</option>
+      <option value="9">09 cm</option>
+      <option value="10">10 cm</option>
+      <option value="11">11 cm</option>
+      <option value="12">12 cm</option>
+      <option value="13">13 cm</option>
+      <option value="14">14 cm</option>
+      <option value="15">15 cm</option>
+      <option value="16">16 cm</option>
+      <option value="17">17 cm</option>
+      <option value="18">18 cm</option>
+      <option value="19">19 cm</option>
+      <option value="20">20 cm</option>
+      <option value="21">21 cm</option>
+      <option value="22">22 cm</option>
+      <option value="23">23 cm</option>
+      <option value="24">24 cm</option>
+      <option value="25">25 cm</option>
+      <option value="26">26 cm</option>
+      <option value="27">27 cm</option>
+      <option value="28">28 cm</option>
+      <option value="29">29 cm</option>
+      <option value="30">30 cm</option>
+      <option value="31">31 cm</option>
+      <option value="32">32 cm</option>
+      <option value="33">33 cm</option>
+      <option value="34">34 cm</option>
+      <option value="35">35 cm</option>
+      <option value="36">36 cm</option>
+      <option value="37">37 cm</option>
+      <option value="38">38 cm</option>
+      <option value="39">39 cm</option>
+      <option value="40">40 cm</option>
+      <option value="41">41 cm</option>
+      <option value="42">42 cm</option>
+      <option value="43">43 cm</option>
+      <option value="44">44 cm</option>
+      <option value="45">45 cm</option>
+      <option value="46">46 cm</option>
+      <option value="47">47 cm</option>
+      <option value="48">48 cm</option>
+      <option value="49">49 cm</option>
+      <option value="50">50 cm</option>
+      <option value="51">51 cm</option>
+      <option value="52">52 cm</option>
+      <option value="53">53 cm</option>
+      <option value="54">54 cm</option>
+      <option value="55">55 cm</option>
+      <option value="56">56 cm</option>
+      <option value="57">57 cm</option>
+      <option value="58">58 cm</option>
+      <option value="59">59 cm</option>
+      <option value="60">60 cm</option>
+    </select>
+</div>
+
+</div><!-- slct -->
+
+
+<div class="form-group">
+	<button class="buttonR buttonPerc">Porcentagem</button>
+	<div class="resPerc esc">
+   
+    <div class="linkImg">
+		<a href="#percentD" class="voltarPerc linkVolt">
+        <img src="img/back.svg" alt="" class="imgVolt">
+			<span>Voltar</span>
+		</a>
+    </div>
+		<div class="texto-res">
+            <p>Porcentagem = <span class="percentSp black">0</span><span class="black"> %</span></p>
+            <p>Vazão = <span class="vazaoSp2 black">0</span><span class="black"> m&sup3;/min</span></p>
+            <p>Concentração = <span class="conSp black">0</span><span class="black"> ppm</span></p>
+            <p>Dose = <span class="doseSp black">0</span> <span class="black"> ml</span></p>
+            <p>Carreamento = <span class="carSp black">0</span> </p>
+        </div>
+        
+			<p>(01) - Limites máximos para não agressão aos organismos não-alvos. Aplicar o produto somente em situações extremas, com elevado nível de infestação larval e ataque intenso de insetos ao homem.</br>
+			Evitar cascatas e empoçamentos na aplicação.</p>
+			<p>(02) - Intervalos de aplicações normais de rotina.</p>
+			<p>(03) - Intervalos onde se deve empregar dois regadores para as aplicações.</p>
+			<p>* Se o cálculo para dosagem for inferior a 5ml, aplicar 5ml como dose mínima.</p>
+
+	</div>
+</div><!--form-group -->
+
+</section><!--porcentagem -->
+
+<!--SETA -->
+<a href="#" class="cd-top js-cd-top">Top</a>
+
+</div><!-- Container Geral -->
+</body>
+
+<script src="js/bti.js"></script>
+<script src="js/backToTop.js"></script> 
+
+</html>
