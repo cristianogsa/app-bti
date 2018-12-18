@@ -20,7 +20,7 @@ $(".voltarVal").addEventListener("click", function(){
 });
 
 function calcVal(){
-	percent = $("#porc").value;
+	percent = Number($("#porc").value);
 	$("#porc").innerHTML = percent.toLocaleString("pt-BR", { maximumFractionDigits: 2 });
 
 	var e = $("#calhaAltura");
@@ -245,7 +245,7 @@ function calcDose(){
 		carreamento = "1000 (02) (03)";
 	}
 	else{
-		alert("Preencha o campo porcentagem");
+		alert("Preencha o campo porcentagem \nApenas Números");
 	}
 
 	//var vaz = (calhaVaz * percent) / 100;
